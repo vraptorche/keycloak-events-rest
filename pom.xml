@@ -7,7 +7,7 @@
 
     <groupId>io.exploreit</groupId>
     <artifactId>keycloak-webhook</artifactId>
-    <version>3.1.0.Final</version>
+    <version>${keycloak.version}</version>
 
     <name>keycloak-events-rest</name>
     <description/>
@@ -17,19 +17,19 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi</artifactId>
-            <version>3.1.0.Final</version>
+            <version>${keycloak.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi-private</artifactId>
-            <version>3.1.0.Final</version>
+            <version>${keycloak.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-core</artifactId>
-            <version>3.1.0.Final</version>
+            <version>${keycloak.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -57,8 +57,6 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-
     <build>
         <finalName>keycloak-events-rest</finalName>
         <plugins>
@@ -66,10 +64,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <keycloak.version>7.0.1</keycloak.version>
+    </properties>
 </project>

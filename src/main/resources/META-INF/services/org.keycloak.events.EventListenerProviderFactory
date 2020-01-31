@@ -1,1 +1,1 @@
-me.michalik.keycloak.events.rest.RestEventListenerProviderFactory
+co.jware.keycloak.events.rest.RestEventListenerProviderFactory

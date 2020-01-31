@@ -1,4 +1,4 @@
-package me.michalik.keycloak.events.rest;
+package co.jware.keycloak.events.rest;
 
 import org.apache.http.client.HttpClient;
 import org.keycloak.Config;
@@ -29,7 +29,7 @@ public class RestEventListenerProviderFactory implements EventListenerProviderFa
     public void init(Config.Scope config) {
         String[] excludes = config.getArray("excludes");
         if (excludes != null) {
-            excludedEvents = new HashSet<EventType>();
+            excludedEvents = new HashSet<>();
             for (String e : excludes) {
                 excludedEvents.add(EventType.valueOf(e));
             }
@@ -37,7 +37,7 @@ public class RestEventListenerProviderFactory implements EventListenerProviderFa
 
         String[] excludesOperations = config.getArray("excludesOperations");
         if (excludesOperations != null) {
-            excludedAdminOperations = new HashSet<OperationType>();
+            excludedAdminOperations = new HashSet<>();
             for (String e : excludesOperations) {
                 excludedAdminOperations.add(OperationType.valueOf(e));
             }
